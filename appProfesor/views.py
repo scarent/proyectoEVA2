@@ -17,7 +17,9 @@ def agregarProfesor(request):
         form = FormProfesor(request.POST)
         if form.is_valid():
             form.save()
-        return index(request)
+            return redirect('/profesores')
+    else:
+        form = FormProfesor()
     data = {'form':form}
     return render(request,'agregarProfesor.html',data)
 
