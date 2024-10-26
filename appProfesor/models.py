@@ -15,3 +15,6 @@ class Profesor(models.Model):
     telefono = models.CharField(max_length=30,validators=[validnumeros])
     dni = models.CharField(max_length=30,validators=[validnumeros])
     direccion = models.CharField(max_length=30)
+
+
+    
